@@ -1,0 +1,137 @@
+*,*::after,*::before {
+	box-sizing:border-box;
+}
+
+body{
+	font-family: 'Dancing Script', cursive;
+	font-size: 1rem;
+	line-height: 1.6;
+}
+
+.modal-container{
+	display: inline-flex;
+	width:100%;
+	justify-content: space-between;
+}
+
+.button{
+	border-radius:1rem;
+	padding:1em 2em;
+	color:coral;
+	cursor:pointer;
+	margin:1rem;
+	transition:0.8s;
+	position: relative;
+	overflow: hidden;
+}
+
+.button::before{
+	content:"";
+	position:absolute;
+	left:0;
+	width:100%;
+	height:0%;
+	background: coral;
+	transition:0.8s;
+}
+
+.click::before{
+	bottom:0;
+	border-radius: 50% 50% 0 0;
+}
+.next::before{
+	top:0;
+	border-radius: 0 0 50% 50%;
+}
+
+.button:hover::before{
+	height:180%;
+}
+
+.modal{
+	display:none;
+	position: fixed;
+	z-index: 1;
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	overflow: auto;
+	background-color:rgba(0,0,0,0.5)
+}
+
+.modal-content{
+	background-color: #f4f4f4;
+	margin:10% auto;
+	width:70%;
+	box-shadow:0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.2);
+	animation-name: modalopen;
+	animation-duration: 1s;
+}
+
+.modal-header h2, .modal-footer h3{
+	margin:0;
+}
+
+.modal-header{
+	background: coral;
+	padding: 1rem;
+	color:#fff;
+	display: inline-flex;
+	flex-flow: row-reverse;
+	align-items: baseline;
+	width:100%;
+	justify-content: space-between;
+}
+
+.modal-body{
+	padding: 10px 20px;
+}
+
+.modal-footer{
+	background:coral;
+	padding: 0.5rem;
+	color:#fff;
+	text-align: center;
+}
+
+.closeBtn{
+	color:#ccc;
+	font-size: 2rem;
+}
+
+.closeBtn:hover,.closeBtn:focus{
+	color:#000;
+	text-decoration: none;
+	cursor:pointer;
+}
+
+@keyframes modalopen{
+	from{opacity:0}
+	to{opacity:1}
+}
+
+/* Calculation section */
+
+.calculation-container{
+	display: none;
+	grid-row-gap:3rem;
+	margin:10%;
+	text-align: center;
+}
+
+#restOF{
+	display: flex;
+	justify-content: center;
+}
+
+/* Table section */
+.table-container{
+	display: none;
+	text-align: center;
+	margin: 10%;
+}
+
+.form-check-input{
+	margin-top: 1.5rem;
+}

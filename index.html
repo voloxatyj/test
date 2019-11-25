@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Fonts = { Dancing Script } -->
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<title>testForIndeema</title>
+</head>
+<body>
+	<div class="modal-container">
+		<button id="modalBtn" class="button click">Click Here</button>
+			<div id="simpleModal" class="modal">
+				<div class="modal-content">
+					<div class="modal-header">
+						<span class="closeBtn">&times;</span>
+						<h2>Modal Header</h2>
+					</div>
+					<div class="modal-body">
+						<p>Hello...I am a modal</p>
+						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius illum cumque laudantium obcaecati ducimus culpa
+							pariatur perferendis quo debitis! Accusamus dolores, molestiae excepturi harum eveniet velit at commodi fugiat
+							aliquam!</p>
+					</div>
+					<div class="modal-footer">
+						<h3>Modal Footer</h3>
+					</div>
+				</div>
+			</div>
+		<button id="nextBtn" class="button next">Next Here</button>	
+	</div>
+	<div class="calculation-container">
+			<div class="form-group">
+				<label for="value">Сума</label>
+				<input type="number" class="form-control" id="value" 
+				placeholder="0.00">
+				<small class="form-text text-muted">введіть суму грошей, яку ви віддаєте):</small>
+			</div>
+			<div class="form-group">
+				<label for="price">Ціна</label>
+				<input type="number" class="form-control" id="price" placeholder="0.00">
+				<small class="form-text text-muted">введіть ціну товару, що ви хочете придбати);</small>
+			</div>
+			<div id='PDV'></div>
+			<div id="error"></div>
+			<button type="submit" id='calculateButton' class="btn btn-primary">Повернути решту</button>
+			<div id="restOF"></div>
+			<button type="submit" id="lastBtn" class="button next">Next Here</button>
+	</div>
+	<div class="table-container">
+		<h1>Data information</h1><br/>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Дата створення</th>
+					<th scope="col">Ім’я</th>
+					<th scope="col">Прізвище</th>
+					<th scope="col">Електронний адрес</th>
+				</tr>
+			</thead>
+			<tbody id='tableData'></tbody>
+		</table>
+		<div class="createUserData">
+			<form id="userForm">
+				<div class="form-group">
+					<label>Ім’я</label>
+					<input type="text" class="form-control" id="name" placeholder="Ваше Ім’я">
+					<small class="form-text text-muted">Введіть дані</small>
+				</div>
+				<div class="form-group">
+					<label>Прізвище</label>
+					<input type="text" class="form-control" id="surname" placeholder="Ваше Прізвище">
+					<small class="form-text text-muted">Введіть дані</small>
+				</div>
+				<div class="form-group">
+					<label>Електронний адрес</label>
+					<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ваша @електронна адреса">
+					<small class="form-text text-muted">Введіть дані</small>
+				</div>
+				<button type="submit" class="btn btn-primary">Створити</button>
+			</form>
+		</div>
+	</div>
+<script src='main.js'></script>	
+</body>
+</html>
