@@ -238,3 +238,5 @@ document.getElementById('tableData').addEventListener('click',(event)=>{
 		Store.removeUserStorage(event.target.parentElement.previousElementSibling.textContent)
 		UI.showAlert('Користувач видалений', 'success');
 }})
+
+var x =1;
