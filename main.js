@@ -239,5 +239,5 @@ document.getElementById('tableData').addEventListener('click',(event)=>{
 		UI.showAlert('Користувач видалений', 'success');
 }})
 
-var x =1;
+var y = 1;
 var ostap = 'molodec'
