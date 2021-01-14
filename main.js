@@ -92,7 +92,7 @@ document.getElementById('calculateButton').addEventListener('click', (event)=>{
 	<h1><strong>${result}<strong>  грн.</h1>
 	Внесіть додаткові гроші або відмінусуйте товар.<br/>
 	Дякую, за розуміння!
-	</div>`} 
+	</div>`}
 	else if (value != 'NaN' || price != 'NaN'){
 		document.getElementById('value').style.border = '0.1rem solid #ced4da';
 		error.remove();
@@ -103,7 +103,7 @@ document.getElementById('calculateButton').addEventListener('click', (event)=>{
 		<li class="list-group-item">Сума, товарів обраних вами становила <br/>${price}</li>
 		<li class="list-group-item">Ваша решта, становить ${restOfResult[0]}грн. i ${arrOfRest.map((item)=>`${item}коп.`)}</li>
 		<li class="list-group-item">ПДВ 20% = ${price * .2}</li>
-		</ul>	
+		</ul>
 		</div>`
 	}
 })
@@ -222,12 +222,12 @@ document.querySelector('#userForm').addEventListener('submit',(event)=>{
 	}
 })
 
-document.getElementById('tableData').addEventListener('change',(event)=>{	
+document.getElementById('tableData').addEventListener('change',(event)=>{
 	if (event.target.className == 'form-check-input') {
 		document.getElementById('name').value = event.target.nextElementSibling.nextElementSibling.textContent;
 		document.getElementById('surname').value = event.target.nextElementSibling.nextElementSibling.nextElementSibling.textContent;
 		document.getElementById('email').value = event.target.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.textContent;
-	} 
+	}
 	setTimeout(()=>UI.clearFields(),10000);
 })
 
@@ -240,3 +240,4 @@ document.getElementById('tableData').addEventListener('click',(event)=>{
 }})
 
 var x =1;
+var ostap = 'molodec'
