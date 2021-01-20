@@ -1,5 +1,5 @@
 // Get modal element
-const modal = document.getElementById('simpleModal');
+const modal = document.getElementById('superSimpleModal');
 // Get open modal button
 const modalBtn = document.getElementById('modalBtn');
 // Get close button
